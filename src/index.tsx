@@ -1,10 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import Content from "./components/Context";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    hello world
+    <div className="content-container">
+      <Content />
+    </div>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

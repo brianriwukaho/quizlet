@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "question": "This is an example question?",
+      "answers": [
+        { "one": "This is answer number 1" },
+        { "two": "This is answer number 2" },
+        { "three": "This is answer number 3" }
+      ],
+      "correctAnswer": "one",
+      "feedback": "This is feedback to the question"
+    }
+  ]
+}
