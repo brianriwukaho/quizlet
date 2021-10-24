@@ -1,14 +1,74 @@
 {
   "questions": [
     {
-      "question": "This is an example question?",
+      "question": "Over the counter fish oil is often advertised as essential to healthy heart function and immunity. If someone you know has high blood pressure or is immune compromised, should you recommend that they:",
       "answers": [
-        { "one": "This is answer number 1" },
-        { "two": "This is answer number 2" },
-        { "three": "This is answer number 3" }
+        {
+          "one": "Supplement their prescription medication with fish oil because it can’t hurt and may well help"
+        },
+        {
+          "two": "Substitute fish oil for their prescription medication and see which makes them feel better"
+        },
+        {
+          "three": "Ignore the advertisement and continue with their prescribed medication"
+        },
+        {
+          "four": "Read what the Natural Medicine Journal says about the value of fish oil"
+        }
       ],
-      "correctAnswer": "one",
-      "feedback": "This is feedback to the question"
+      "correctAnswer": "three",
+      "feedback": "While there are conditions for which fish oil can be recommended by a doctor, fish oil can be dangerous to someone with a heart condition—for example, if they have a defibrillator inserted, it can cause irregular heartbeats—and it can lower the body’s immune response. Many over-the-counter fish oils contain contaminants that are harmful to the body or simply costly and ineffective. See, for example, https://www.webmd.com/vitamins/ai/ingredientmono-993/fish-oil"
+    },
+    {
+      "question": "True or False: Vitamins, supplements, and alternative therapies that are sold in supermarkets or advertised in the media must be subject to the same kinds of randomised clinical trials as prescription medications.",
+      "answers": [
+        {
+          "one": "true"
+        },
+        {
+          "two": "false"
+        }
+      ],
+      "correctAnswer": "two",
+      "feedback": "Research into the efficacy of vitamins is often “mixed”. Clinical trials of the effects of multivitamins on cancer, for example, have not resulted in clear evidence of benefits. See https://pubmed.ncbi.nlm.nih.gov/17209217/"
+    },
+    {
+      "question": "Over the counter fish oil is often advertised as essential to healthy heart function and immunity. If someone you know has high blood pressure or is immune compromised, should you recommend that they:",
+      "answers": [
+        {
+          "one": "Supplement their prescription medication with fish oil because it can’t hurt and may well help"
+        },
+        {
+          "two": "Substitute fish oil for their prescription medication and see which makes them feel better"
+        },
+        {
+          "three": "Ignore the advertisement and continue with their prescribed medication"
+        },
+        {
+          "four": "Read what the Natural Medicine Journal says about the value of fish oil"
+        }
+      ],
+      "correctAnswer": "three",
+      "feedback": "While there are conditions for which fish oil can be recommended by a doctor, fish oil can be dangerous to someone with a heart condition—for example, if they have a defibrillator inserted, it can cause irregular heartbeats—and it can lower the body’s immune response. Many over-the-counter fish oils contain contaminants that are harmful to the body or simply costly and ineffective. See, for example, https://www.webmd.com/vitamins/ai/ingredientmono-993/fish-oil"
+    },
+    {
+      "question": "Over the counter fish oil is often advertised as essential to healthy heart function and immunity. If someone you know has high blood pressure or is immune compromised, should you recommend that they:",
+      "answers": [
+        {
+          "one": "Supplement their prescription medication with fish oil because it can’t hurt and may well help"
+        },
+        {
+          "two": "Substitute fish oil for their prescription medication and see which makes them feel better"
+        },
+        {
+          "three": "Ignore the advertisement and continue with their prescribed medication"
+        },
+        {
+          "four": "Read what the Natural Medicine Journal says about the value of fish oil"
+        }
+      ],
+      "correctAnswer": "three",
+      "feedback": "While there are conditions for which fish oil can be recommended by a doctor, fish oil can be dangerous to someone with a heart condition—for example, if they have a defibrillator inserted, it can cause irregular heartbeats—and it can lower the body’s immune response. Many over-the-counter fish oils contain contaminants that are harmful to the body or simply costly and ineffective. See, for example, https://www.webmd.com/vitamins/ai/ingredientmono-993/fish-oil"
     }
   ]
 }

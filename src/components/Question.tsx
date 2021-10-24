@@ -41,7 +41,7 @@ const Question = (props: QuestionProps) => {
 
   return (
     <div className="question">
-      <div className="question-title">{question}</div>
+      <div className="question-title">❓ {question}</div>
       {answers.map((answer: Answer, index: number) => {
         const questionNumber = Object.keys(answer)[0];
         const text = Object.values(answer)[0];
@@ -61,16 +61,16 @@ const Question = (props: QuestionProps) => {
       <div
         className="submitAnswer"
         onClick={() => {
-          if (!answered) {
+          if (!answered && selected) {
             setAnswered(true);
             setQuestionsAnswered(questionsAnswered + 1);
             if (isCorrectAnswer) setCorrectAnswers(correctAnswers + 1);
           }
         }}
       >
-        submit
+        ➡️ submit
       </div>
-      {answered && <div className="feedback">Feedback: {feedback}</div>}
+      {answered && <div className="feedback">👍 Feedback: {feedback}</div>}
     </div>
   );
 };

@@ -6,6 +6,15 @@ const Answer = ({
   answered,
   isCorrectAnswer,
 }: any) => {
+  const numberDict: any = {
+    // @ts-ignore
+    one: `1️⃣`,
+    // @ts-ignore
+
+    two: `2️⃣`,
+    three: `3️⃣`,
+    four: `4️⃣`,
+  };
   return (
     <div
       onClick={() => {
@@ -15,7 +24,9 @@ const Answer = ({
       }}
       className={`answer ${index === selected ? "selected" : ""}`}
     >
-      {`${answer} ${answered ? (isCorrectAnswer ? "✔️" : "❌") : ""}`}
+      {`${numberDict[index]}: ${answer} ${
+        answered ? (isCorrectAnswer ? "✔️" : "❌") : ""
+      }`}
     </div>
   );
 };
