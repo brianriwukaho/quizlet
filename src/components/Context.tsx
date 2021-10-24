@@ -39,11 +39,17 @@ const Content = () => {
     <div className="content">
       {!finished && questionComponents[currentQuestion]}
       {finished && (
-        <>
-          <div>Thank you for your response.</div>
-          <div>Questions Answered: {questionsAnswered}</div>
-          <div>Correct Answers: {correctAnswers}</div>
-        </>
+        <div className="finished-container">
+          <div>🙌🙌🙌</div>
+          <div>Thank you for your response</div>
+          <div>
+            You got{" "}
+            <b>
+              {correctAnswers}/{questionsAnswered}
+            </b>{" "}
+            questions correct!
+          </div>
+        </div>
       )}
     </div>
   );

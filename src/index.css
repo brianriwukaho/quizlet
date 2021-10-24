@@ -12,6 +12,17 @@ code {
     monospace;
 }
 
+.question-number {
+  opacity: 0.6;
+  font-weight: bold;
+  color: #6a5be2;
+}
+
+.question-title {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
 .content-container {
   height: 100vh;
   position: fixed;
@@ -22,12 +33,14 @@ code {
   align-items: center;
   justify-content: center;
   background-color: #6a5be2;
+  font-size: 16px;
 }
 
 .content {
-  min-height: 600px;
+  min-height: 400px;
   padding: 24px;
   box-sizing: border-box;
+  min-width: 550px;
   width: 640px;
   border-radius: 8px;
   box-shadow: 0px 24px 48px 0 rgba(0, 0, 0, 0.16);
@@ -41,6 +54,7 @@ code {
   box-sizing: border-box;
   border-radius: 8px;
   border: 2px solid #6a5be2;
+  cursor: pointer;
 }
 
 .question {
@@ -48,12 +62,105 @@ code {
   flex-direction: column;
 }
 
-.answer:hover {
-  color: #6a5be2;
-  background-color: #eee5ef;
+@media (hover: hover) {
+  .answer:hover {
+    background-color: #6a5be2;
+    opacity: 0.6;
+    color: white;
+  }
+}
+.selected {
+  background-color: #6a5be2 !important;
+  color: white !important;
 }
 
-.selected {
+@media (hover: hover) {
+  .submit:hover {
+    background-color: #6a5be2;
+    opacity: 0.6;
+    color: white;
+  }
+}
+
+.submit {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6a5be2;
+  width: 80px;
+  height: 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.finish {
   color: #6a5be2;
-  background-color: #eee5ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 12px;
+  border: 2px solid #6a5be2;
+  box-sizing: border-box;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.next {
+  color: #6a5be2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 12px;
+  border: 2px solid #6a5be2;
+  box-sizing: border-box;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .next:hover {
+    opacity: 0.6;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px;
+}
+
+.feedback {
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 4px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+.finished-container {
+  font-size: 32px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  height: 550px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.correct-answer {
+  border: 2px solid green;
+}
+
+.correct {
+  background-color: #9bf599;
+}
+
+.incorrect {
+  background-color: #ff8f8f;
 }
