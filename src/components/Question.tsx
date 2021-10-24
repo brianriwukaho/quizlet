@@ -23,6 +23,8 @@ type QuestionProps = {
   questionsAnswered: number;
   setQuestionsAnswered: any;
   setCurrentQuestion: any;
+  isFinalQuestion: boolean;
+  setFinished: any;
 };
 
 const Question = (props: QuestionProps) => {
@@ -39,44 +41,58 @@ const Question = (props: QuestionProps) => {
     questionsAnswered,
     setQuestionsAnswered,
     setCurrentQuestion,
+    isFinalQuestion,
+    setFinished,
   } = props;
   const isCorrectAnswer = selected === correctAnswer;
 
   return (
     <div className="question">
       <div className="question-title">❓ {question}</div>
-      {answers.map((answer: Answer, index: number) => {
-        const questionNumber = Object.keys(answer)[0];
-        const text = Object.values(answer)[0];
-        const isCorrectAnswer = questionNumber === correctAnswer;
-        return (
-          <Answer
-            isCorrectAnswer={isCorrectAnswer}
-            key={index.toString()}
-            index={questionNumber}
-            selected={selected}
-            answered={answered}
-            answer={text}
-            onclick={setSelected}
-          />
-        );
-      })}
-      <div
-        className="submitAnswer"
-        onClick={() => {
-          if (!answered && selected) {
-            setAnswered(true);
-            setQuestionsAnswered(questionsAnswered + 1);
-            if (isCorrectAnswer) setCorrectAnswers(correctAnswers + 1);
-          }
-        }}
-      >
-        ➡️ submit
+      <div className="answers-container">
+        {" "}
+        {answers.map((answer: Answer, index: number) => {
+          const questionNumber = Object.keys(answer)[0];
+          const text = Object.values(answer)[0];
+          const isCorrectAnswer = questionNumber === correctAnswer;
+          return (
+            <Answer
+              isCorrectAnswer={isCorrectAnswer}
+              key={index.toString()}
+              index={questionNumber}
+              selected={selected}
+              answered={answered}
+              answer={text}
+              onclick={setSelected}
+            />
+          );
+        })}
       </div>
-      {answered && (
-        <div onClick={() => setCurrentQuestion(index + 1)}>Next</div>
-      )}
-      {answered && <div className="feedback">👍 Feedback: {feedback}</div>}
+      <div className="buttons-container">
+        <div
+          className="submitAnswer"
+          onClick={() => {
+            if (!answered && selected) {
+              setAnswered(true);
+              setQuestionsAnswered(questionsAnswered + 1);
+              if (isCorrectAnswer) setCorrectAnswers(correctAnswers + 1);
+            }
+          }}
+        >
+          ➡️ submit
+        </div>
+        {answered && !isFinalQuestion && (
+          <div className="next" onClick={() => setCurrentQuestion(index + 1)}>
+            Next
+          </div>
+        )}
+        {answered && <div className="feedback">👍 Feedback: {feedback}</div>}
+        {answered && isFinalQuestion && (
+          <div onClick={() => setFinished(true)} className="finish">
+            Finish
+          </div>
+        )}
+      </div>
     </div>
   );
 };
