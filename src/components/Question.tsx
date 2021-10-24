@@ -22,12 +22,14 @@ type QuestionProps = {
   correctAnswers: number;
   questionsAnswered: number;
   setQuestionsAnswered: any;
+  setCurrentQuestion: any;
 };
 
 const Question = (props: QuestionProps) => {
   const [selected, setSelected] = useState("");
   const [answered, setAnswered] = useState(false);
   const {
+    index,
     question,
     answers,
     correctAnswer,
@@ -36,6 +38,7 @@ const Question = (props: QuestionProps) => {
     correctAnswers,
     questionsAnswered,
     setQuestionsAnswered,
+    setCurrentQuestion,
   } = props;
   const isCorrectAnswer = selected === correctAnswer;
 
@@ -70,6 +73,9 @@ const Question = (props: QuestionProps) => {
       >
         ➡️ submit
       </div>
+      {answered && (
+        <div onClick={() => setCurrentQuestion(index + 1)}>Next</div>
+      )}
       {answered && <div className="feedback">👍 Feedback: {feedback}</div>}
     </div>
   );

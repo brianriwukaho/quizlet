@@ -25,6 +25,7 @@ const Content = () => {
         correctAnswers={correctAnswers}
         questionsAnswered={questionsAnswered}
         setQuestionsAnswered={setQuestionsAnswered}
+        setCurrentQuestion={setCurrentQuestion}
       />
     );
   });
@@ -34,12 +35,6 @@ const Content = () => {
       <div>Questions Answered: {questionsAnswered}</div>
       <div>Correct Answers: {correctAnswers}</div>
       {questionComponents[currentQuestion]}
-      {currentQuestion > 0 && (
-        <div onClick={() => setCurrentQuestion(currentQuestion - 1)}>Prev</div>
-      )}
-      {currentQuestion < questions.length - 1 && (
-        <div onClick={() => setCurrentQuestion(currentQuestion + 1)}>Next</div>
-      )}
     </div>
   );
 };
